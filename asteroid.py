@@ -21,8 +21,8 @@ class Asteroid(CircleShape):
             return
 
         random_angle = random.uniform(20, 50)
-        l_split_velocity = pygame.Vector2(self.velocity).rotate(-random_angle)
-        r_split_velocity = pygame.Vector2(self.velocity).rotate(random_angle)
+        l_split_velocity = self.velocity.rotate(-random_angle)
+        r_split_velocity = self.velocity.rotate(random_angle)
         new_radius = self.radius - ASTEROID_MIN_RADIUS
 
         l_asteroid = Asteroid(self.position.x, self.position.y, new_radius)
