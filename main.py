@@ -49,7 +49,7 @@ def main():
             for shot in shots:
                 if asteroid.collision_check(shot):
                     shot.kill()
-                    asteroid.kill()
+                    asteroid.split()
 
         pygame.display.flip()
         dt = clock.tick(FPS) / 1000
